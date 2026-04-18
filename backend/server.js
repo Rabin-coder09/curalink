@@ -1,10 +1,4 @@
-const fs = require("fs");
-const path = require("path");
-const envFile = fs.readFileSync(path.join(__dirname, ".env"), "utf8");
-envFile.split("\n").forEach(line => {
-  const [key, ...vals] = line.trim().split("=");
-  if (key && vals.length) process.env[key.trim()] = vals.join("=").trim();
-});
+require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
