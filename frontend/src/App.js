@@ -4,7 +4,7 @@ import axios from "axios";
 import jsPDF from "jspdf";
 import "./App.css";
 
-const API = "http://localhost:5000";
+const API = "https://curalink-backend-xle1.onrender.com";
 
 // ── Voice Input Hook ──
 function useVoiceInput(onResult) {
