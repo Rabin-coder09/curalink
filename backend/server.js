@@ -7,7 +7,10 @@ const mongoose = require("mongoose");
 const Groq = require("groq-sdk");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000", "http://localhost:3001", "https://curalink-backend-xle1.onrender.com", /\.vercel\.app$/],
+  credentials: true
+}));
 app.use(express.json());
 
 // ─── Groq Client ──────────────────────────────────────────────────────────────
